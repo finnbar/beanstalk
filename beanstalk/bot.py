@@ -147,8 +147,8 @@ class SimpleHelp(commands.MinimalHelpCommand):
     async def send_pages(self):
         await self.get_destination().send(
             '```Usage: \n'
-            '[[card]] - Fetch card embed.\n'
-            '[[!card]] - Fetch card image.\n'
+            '{{card}} - Fetch card embed.\n'
+            '{{!card}} - Fetch card image.\n'
             '%beanstalk refresh - Refresh card cache.```'
         )
 
