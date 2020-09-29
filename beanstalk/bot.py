@@ -13,9 +13,9 @@ from beanstalk import cached
 from beanstalk.cached import CARDS
 
 TOKEN = os.environ.get('BEANSTALK_TOKEN')
-QUERY_PATTERN = re.compile('\[\[([^\]]*)\]\]')
+QUERY_PATTERN = re.compile('\{\{([^\]]*)\}\}')
 
-bot = commands.Bot(command_prefix='!', description='Netrunner bot')
+bot = commands.Bot(command_prefix='%', description='Netrunner bot')
 
 last_refresh = None
 
@@ -35,7 +35,7 @@ async def help(*_):
         '```Usage: \n'
         '[[card]] - Fetch card embed.\n'
         '[[!card]] - Fetch card image.\n'
-        '!beanstalk refresh - Refresh card cache.```'
+        '%beanstalk refresh - Refresh card cache.```'
     )
 
 
