@@ -128,14 +128,16 @@ async def on_message(message):
         if not CARDS:
             await message.channel.send(f'My card pool is empty. https://netrunnerdb.com might be down.')
 
+        got_result = False
         for search in (exact_match, fuzzy_match):
             card = search(query, CARDS)
             if card:
                 embed = embed(card)
+                got_result = True
                 print(f'{message.channel.id}: `{query}` satisifed with `{card["title"]}` via {search.__name__}')
                 break
 
-        if embed:
+        if got_result:
             await message.channel.send(embed=embed.render())
         else:
             await message.channel.send(f'No results for {query}')
