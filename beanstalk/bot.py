@@ -28,17 +28,6 @@ async def beanstalk(ctx):
     """
     pass
 
-
-@beanstalk.command()
-async def help(ctx):
-    await ctx.send(
-        '```Usage: \n'
-        '[[card]] - Fetch card embed.\n'
-        '[[!card]] - Fetch card image.\n'
-        '%beanstalk refresh - Refresh card cache.```'
-    )
-
-
 @beanstalk.command()
 async def refresh(ctx):
     """
@@ -154,7 +143,15 @@ async def on_message(message):
     # Give other commands a chance to resolve.
     await bot.process_commands(message)
 
+class SimpleHelp(commands.MinimalHelpCommand):
+    async def send_pages(self):
+        await self.get_destination().send(
+            '```Usage: \n'
+            '[[card]] - Fetch card embed.\n'
+            '[[!card]] - Fetch card image.\n'
+            '%beanstalk refresh - Refresh card cache.```'
+        )
 
 if __name__ == '__main__':
-    bot.help_command = help
+    bot.help_command = SimpleHelp()
     bot.run(TOKEN)
