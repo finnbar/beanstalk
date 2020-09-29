@@ -76,16 +76,16 @@ class CardText(CardEmbed):
     # These are substitutions applied to card text. The values
     # of this map point to Discord emojis.
     SUBSTITUTIONS = {
-        "(\[click\])": "<:nrclick:418454127488532480>",
-        "(\[recurring-credit\])": "<:nrrecurringcredit:418457537881440256>",
-        "(\[credit\])": "<:nrcredit:418453466826932229>",
+        "(\[click\])": "<:nrclick:760539633146396722>",
+        "(\[recurring-credit\])": "<:nrrecurringcredit:760539632868786219>",
+        "(\[credit\])": "<:nrcredit:760539632634298379>",
         "(\[subroutine\])": "↳",
-        "(\[trash\])": "<:nrtrash:418457787689992193>",
-        "(\[link\])": "<:nrlink:418457823836373012>",
-        "(0\[mu\])": "<:nrmu0:418457664293568513>",
-        "(1\[mu\])": "<:nrmu1:418457694354014228>",
-        "(2\[mu\])": "<:nrmu2:418457723621867521>",
-        "(3\[mu\])": "<:nrmu3:418457750906077184>",
+        "(\[trash\])": "<:nrtrash:760539633137614971>",
+        "(\[link\])": "<:nrlink:760539632935895103>",
+        "(0\[mu\])": "<:nrmu0:760539632701014027>",
+        "(1\[mu\])": "<:nrmu1:760539632692887633>",
+        "(2\[mu\])": "<:nrmu2:760539633153998868>",
+        "(3\[mu\])": "<:nrmu3:760539633280352316>",
     }
 
     def type_line(self):
