@@ -40,7 +40,7 @@ async def help(*_):
 
 
 @beanstalk.command()
-async def refresh(*_):
+async def refresh(ctx):
     """
     Refreshes the bots local cache of the card pool. Useful when
     the card pool expands.
@@ -53,9 +53,9 @@ async def refresh(*_):
         cached.refresh()
         last_refresh = time.time()
         from beanstalk.cached import CARDS
-        await bot.say('Cache refreshed.')
+        await ctx.send('Cache refreshed.')
     else:
-        await bot.say(f'Last refresh was only {time_since} seconds ago. Skipping.')
+        await ctx.send(f'Last refresh was only {time_since} seconds ago. Skipping.')
 
 
 @bot.event
@@ -156,5 +156,4 @@ async def on_message(message):
 
 
 if __name__ == '__main__':
-    bot.remove_command('help')
     bot.run(TOKEN)
