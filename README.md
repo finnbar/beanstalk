@@ -1,7 +1,6 @@
 # Beanstalk
 
-Beanstalk is a Discord bot for Android: Netrunner. I wrote a little about it
-[here][blog].
+Beanstalk is a Discord bot for Android: Netrunner. This is solely written by Doug Black, with minor changes by me to make the prefix not collide with a collection of other bots. Doug wrote a little about it [here][blog].
 
 ### Screenshots
 
@@ -10,7 +9,7 @@ Beanstalk is a Discord bot for Android: Netrunner. I wrote a little about it
 ### Installation
 
 ```
-git clone git@github.com:dougblack/beanstalk.git
+git clone git@github.com:finnbar/beanstalk.git
 cd beanstalk
 make install
 ```
