@@ -30,8 +30,8 @@ async def beanstalk(ctx):
 
 
 @beanstalk.command()
-async def help(*_):
-    await bot.say(
+async def help(ctx):
+    await ctx.send(
         '```Usage: \n'
         '[[card]] - Fetch card embed.\n'
         '[[!card]] - Fetch card image.\n'
@@ -156,4 +156,5 @@ async def on_message(message):
 
 
 if __name__ == '__main__':
+    bot.help_command = help
     bot.run(TOKEN)
