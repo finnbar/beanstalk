@@ -79,7 +79,7 @@ def fuzzy_match(query, cards):
     score is less than 50 to prevent seemingly random responses from Beanstalk.
     """
     # Fuzzy match over the card pool.
-    results = process.extract(query, cards.keys(), limit=1, scorer=fuzz.token_set_ratio)
+    results = process.extract(query, cards.keys(), limit=1)
     if not results:
         return None
     # If score is less than 50, ignore this result. Beanstalk will return no
