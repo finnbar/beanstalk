@@ -13,7 +13,7 @@ from beanstalk import cached
 from beanstalk.cached import CARDS
 
 TOKEN = os.environ.get('BEANSTALK_TOKEN')
-QUERY_PATTERN = re.compile('\{\{([^\]]*?)\}\}')
+QUERY_PATTERN = re.compile('{{([^}]*)}}')
 
 bot = commands.Bot(command_prefix='%', description='Netrunner bot')
 
